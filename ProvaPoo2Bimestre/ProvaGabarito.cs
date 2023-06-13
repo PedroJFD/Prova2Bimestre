@@ -20,21 +20,33 @@ namespace ProvaPoo2Bimestre
 
         private void bt_avaliar_Click(object sender, EventArgs e)
         {
-            string[] array = { "A", "B", "D", "E", "C", "A", "A", "D", "E", "B" };
+            Avaliar();
+        }
 
-            string[] respostas = {tx_quest1.Text, tx_quest2.Text, tx_quest3.Text, tx_quest4.Text, tx_quest5.Text, tx_quest6.Text, tx_quest7.Text, tx_quest8.Text, tx_quest9.Text, tx_quest10.Text};
-
-            int contadoracertos = 0;
-
-            for (int i = 0; i < array.Length; i++)
+        public void Avaliar()
+        {
+            try
             {
-                if (array[i] == respostas[i].ToUpper())
-                {
-                    contadoracertos++;
-                }
-            }
+                string[] array = { "A", "B", "D", "E", "C", "A", "A", "D", "E", "B" };
 
-            lb_resultado.Text = $"{contadoracertos.ToString()}/10";
+                string[] respostas = { tx_quest1.Text, tx_quest2.Text, tx_quest3.Text, tx_quest4.Text, tx_quest5.Text, tx_quest6.Text, tx_quest7.Text, tx_quest8.Text, tx_quest9.Text, tx_quest10.Text };
+
+                int contadoracertos = 0;
+
+                for (int i = 0; i < array.Length; i++)
+                {
+                    if (array[i] == respostas[i].ToUpper())
+                    {
+                        contadoracertos++;
+                    }
+                }
+
+                lb_resultado.Text = $"{contadoracertos.ToString()}/10";
+            }
+            catch (Exception ex)
+            {
+                lb_resultado.Text += ex.Message;
+            }
         }
     }
 }

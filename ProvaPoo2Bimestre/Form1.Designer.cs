@@ -33,7 +33,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(49, 37);
+            button1.Location = new Point(198, 143);
             button1.Name = "button1";
             button1.Size = new Size(92, 57);
             button1.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(508, 341);
             Controls.Add(button1);
             Name = "bt_correcao";
             Text = "Menu";
