@@ -20,11 +20,13 @@ namespace ProvaPoo2Bimestre
 
         private void bt_avaliar_Click(object sender, EventArgs e)
         {
+            //segundo e terceiro commit estao no mesmo commit (segundo commit)
             Avaliar();
         }
 
         public void Avaliar()
         {
+            //segundo e terceiro commit estao no mesmo commit (segundo commit)
             try
             {
                 string[] array = { "A", "B", "D", "E", "C", "A", "A", "D", "E", "B" };
